@@ -103,11 +103,7 @@ friendroure.get('/friend', verifytoken, async (req, res) => {
         where: { 'userid': req.user.id },
         include: [
             {as: 'friend', model: users} 
-<<<<<<< HEAD
         ]
-=======
-        ] 
->>>>>>> 3c62756 (Baru)
     })
     if (fr < 1) return res.status(400).json({ code: 400, msg: 'Friend Empty' })
     else return res.status(200).json(fr) 

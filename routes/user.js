@@ -18,11 +18,7 @@ const user = require('../models/user.js')
 const { Op } = require('sequelize')
 
 userroute.get('/',(req,res)=>{
-<<<<<<< HEAD
     res.send('testerr')
-=======
-    res.send('testerr') 
->>>>>>> 3c62756 (Baru)
 })
 userroute.get('/getuser',verifytoken,async(req,res)=>{
     const user = await users.findOne({where:{"id":req.user.id}})
