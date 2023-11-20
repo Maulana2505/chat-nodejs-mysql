@@ -1,10 +1,6 @@
 const { db } = require('../database/db.js');
 const user = require('../models/user.js');
 const { Sequelize, DataTypes } = require('sequelize');
-<<<<<<< HEAD
-=======
-const chat = require('./chat.js');
->>>>>>> 3c62756 (Baru)
 
 
 const friend = db.define('friends', {
