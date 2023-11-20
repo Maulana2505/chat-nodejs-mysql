@@ -22,11 +22,7 @@ const friendreq = db.define('friendrequest',{
     },
 })
 // db.sync({force:true})   
-<<<<<<< HEAD
 db.sync()
-=======
-db.sync() 
->>>>>>> 3c62756 (Baru)
 friendreq.belongsTo(user,{as:'friendreq',foreignKey:'friendreqid'}) 
 user.hasMany(friendreq,{foreignKey: 'userid'}) 
 // friendreq.removeAttribute('id')

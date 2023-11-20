@@ -14,10 +14,6 @@ const user = db.define('user', {
     imgprofile: { field: 'imgprofile', type: DataTypes.STRING, },
 },
     { Sequelize })
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 3c62756 (Baru)
 
 module.exports = user

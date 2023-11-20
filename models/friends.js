@@ -31,19 +31,9 @@ const friend = db.define('friends', {
 // friend.belongsTo(user,{as:'friend',through:'friend',foreignKey:'userid',sourceKey:'userid'}) 
 friend.belongsTo(user,{as:'friend',foreignKey:'friendid'})
 // user.belongsTo(friend,{as:'f',foreignKey:'id'})
-<<<<<<< HEAD
 // friend.hasMany(user,{foreignKey: 'friendsid'})
 user.hasMany(friend, {foreignKey: 'userid'})
 // friend.belongsTo(user, {foreignKey: 'user_id'})
 
-=======
-// chat.belongsTo(friend, {foreignKey : 'userid'})
-// friend.hasMany(user,{foreignKey: 'friendsid'})
-friend.hasMany(chat)
-
-user.hasMany(friend, {foreignKey: 'userid'})
-// friend.belongsTo(user, {foreignKey: 'user_id'})
- 
->>>>>>> 3c62756 (Baru)
 // friend.removeAttribute('id')
 module.exports = friend
