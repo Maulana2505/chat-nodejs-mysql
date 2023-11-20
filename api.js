@@ -1,0 +1,13 @@
+const express = require('express')
+const app = express()
+const userroute = require('./routes/user.js')
+const friendroure = require('./routes/friend.js')
+const chatroute = require('./routes/chat.js')
+app.use(userroute)
+app.use(friendroure)
+app.use(chatroute)
+module.exports = app;  
+// const postroute = require('./routes/post.js')
+// app.use(postroute)
+// app.use(followroute)
+// const followroute = require('./routes/follow.js')
