@@ -21,7 +21,7 @@ const friendreq = db.define('friendrequest',{
         defaultValue :DataTypes.UUIDV4,
     },
 })
-// db.sync({force:true})   
+// db.sync({force:true})    
 db.sync()
 friendreq.belongsTo(user,{as:'friendreq',foreignKey:'friendreqid'}) 
 user.hasMany(friendreq,{foreignKey: 'userid'}) 

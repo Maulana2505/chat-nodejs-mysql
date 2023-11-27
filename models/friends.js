@@ -1,6 +1,7 @@
 const { db } = require('../database/db.js');
 const user = require('../models/user.js');
 const { Sequelize, DataTypes } = require('sequelize');
+const chat = require('./chat.js');
 
 
 const friend = db.define('friends', {
@@ -28,6 +29,7 @@ const friend = db.define('friends', {
 friend.belongsTo(user,{as:'friend',foreignKey:'friendid'})
 // user.belongsTo(friend,{as:'f',foreignKey:'id'})
 // friend.hasMany(user,{foreignKey: 'friendsid'})
+friend.hasMany(chat)
 user.hasMany(friend, {foreignKey: 'userid'})
 // friend.belongsTo(user, {foreignKey: 'user_id'})
 

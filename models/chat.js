@@ -7,12 +7,12 @@ const chat = db.define('chat', {
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
     },
-    senderId: {
+    senderid: {
         field: 'senderid',
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
     },
-    receiverId: {
+    receiverid: {
         field: 'receiverid',
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
